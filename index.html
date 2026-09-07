@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tshidi's Crunchy Muesli — Handmade Small-Batch Muesli (500g)</title>
+<meta name="description" content="Handmade crunchy muesli toasted in small batches — oats, nuts, seeds and dried fruit. 500g bag, R60. Order via WhatsApp or Instagram.">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<!-- Open Graph / social sharing preview (no production URL yet — add og:url and canonical once the site has a live domain) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tshidi's Crunchy Muesli — Handmade Small-Batch Muesli">
+<meta property="og:description" content="Toasted oats, nuts, seeds and dried fruit — handmade in small batches. 500g bag, R60. Order via WhatsApp or Instagram.">
+<meta property="og:image" content="assets/images/bowl.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Product structured data — only fields we actually know -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Tshidi's Original Crunchy Muesli",
+  "brand": { "@type": "Brand", "name": "Tshidi's Crunchy Muesli" },
+  "description": "Handmade crunchy muesli toasted in small batches, made with oats, nuts, seeds and dried fruit.",
+  "image": "assets/images/bowl.jpg",
+  "weight": { "@type": "QuantitativeValue", "value": "500", "unitText": "g" },
+  "offers": {
+    "@type": "Offer",
+    "price": "60",
+    "priceCurrency": "ZAR"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --cream: #F7EFE0;
+    --cream-soft: #FDF9EF;
+    --cream-edge: #EADFC6;
+    --ink: #2B1D10;
+    --ink-soft: #5C4A38;
+    --brown: #7C4A22;
+    --brown-deep: #5A3416;
+    --amber: #945A1B;       /* darkened for AA text contrast on cream / as button bg */
+    --amber-deep: #7A4A17;  /* hover / pressed state */
+    --amber-bright: #C97A2E;/* lighter accent, used only against the dark contact panel */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --measure: 62ch;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  body{
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img{ max-width: 100%; display: block; }
+  a{ color: inherit; }
+
+  h1, h2, h3{
+    font-family: var(--serif);
+    color: var(--brown-deep);
+    margin: 0 0 0.5em 0;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+  p{ margin: 0 0 1em 0; }
+
+  .wrap{ max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .measure{ max-width: var(--measure); }
+  .center{ text-align: center; }
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(247, 239, 224, 0.92);
+    backdrop-filter: saturate(140%) blur(6px);
+    border-bottom: 1px solid var(--cream-edge);
+  }
+  .topbar-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 14px;
+  }
+  .wordmark{
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--brown-deep);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .wm-short{ display: none; }
+  .site-nav{ display: none; }
+  .btn-label-full{ display: inline; }
+  .btn-label-short{ display: none; }
+  @media (min-width: 900px){
+    .site-nav{
+      display: flex;
+      gap: 22px;
+      font-size: 0.92rem;
+      flex: 1;
+      justify-content: center;
+    }
+    .site-nav a{
+      text-decoration: none;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    .site-nav a:hover{ color: var(--brown-deep); }
+  }
+  @media (max-width: 460px){
+    .wm-full{ display: none; }
+    .wm-short{ display: inline; }
+    .wordmark{ font-size: 0.92rem; }
+    .topbar .btn-label-full{ display: none; }
+    .topbar .btn-label-short{ display: inline; }
+    .topbar .btn-sm{ padding: 9px 14px; font-size: 0.82rem; }
+  }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1.5px solid transparent;
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn svg{ width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-primary{ background: var(--amber); color: var(--cream-soft); }
+  .btn-primary:hover{ background: var(--amber-deep); transform: translateY(-1px); }
+  .btn-outline{ background: transparent; border-color: var(--brown); color: var(--brown-deep); }
+  .btn-outline:hover{ background: var(--cream-edge); transform: translateY(-1px); }
+  .btn-sm{ min-height: 40px; padding: 9px 16px; font-size: 0.85rem; }
+  .btn-block{ width: 100%; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding: 48px 0 40px; overflow: hidden; }
+  .hero-grid{ display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+  .price-badge{
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    background: rgba(148,90,27,0.10);
+    border: 1.5px solid var(--amber);
+    color: var(--amber);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 18px;
+  }
+  .hero-copy h1{
+    font-size: clamp(1.9rem, 5vw, 2.7rem);
+    letter-spacing: -0.01em;
+  }
+  .hero-copy p{ font-size: 1.05rem; color: var(--ink-soft); max-width: 46ch; }
+  .hero-actions{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .hero-visual{ position: relative; justify-self: center; width: min(300px, 74vw); }
+  .hero-visual img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 30px 50px -20px rgba(90,52,22,0.45);
+  }
+  .hero-copy, .hero-visual{ opacity: 0; transform: translateY(14px); animation: rise 0.7s ease forwards; }
+  .hero-visual{ animation-delay: 0.15s; }
+  .hero-actions{ opacity: 0; animation: rise 0.7s ease forwards; animation-delay: 0.32s; }
+  @keyframes rise{ to{ opacity: 1; transform: translateY(0); } }
+
+  /* ---------- divider ---------- */
+  .sprig{ display: block; margin: 8px auto; opacity: 0.65; }
+
+  /* ---------- product / pricing ---------- */
+  .product{ padding: 8px 0 48px; }
+  .product-card{
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--cream-soft);
+    border: 1.5px solid var(--cream-edge);
+    border-radius: 18px;
+    padding: clamp(28px, 5vw, 44px);
+  }
+  .product-meta{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .product-size{ font-size: 1.05rem; color: var(--ink-soft); }
+  .product-price{ font-family: var(--serif); font-size: 1.8rem; color: var(--amber); font-weight: 600; }
+  .product-card p{ color: var(--ink-soft); max-width: 42ch; margin-left: auto; margin-right: auto; }
+
+  /* ---------- benefits ---------- */
+  .benefits{ padding: 8px 0 56px; }
+  .benefits h2, .benefits > .wrap > .lede{ text-align: center; }
+  .benefits > .wrap > .lede{ color: var(--ink-soft); max-width: 46ch; margin: 0 auto 36px; }
+  .benefit-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
+  .benefit{ text-align: center; }
+  .benefit svg{ width: 30px; height: 30px; color: var(--amber); margin-bottom: 10px; }
+  .benefit h3{ font-size: 1rem; margin-bottom: 4px; }
+  .benefit p{ font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+
+  /* ---------- product imagery ---------- */
+  .imagery{ padding: 8px 0 56px; }
+  .imagery-frame{ max-width: 560px; margin: 0 auto; text-align: center; }
+  .imagery-frame img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px -22px rgba(90,52,22,0.45);
+  }
+  .imagery-frame figcaption{
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  /* ---------- ingredients ---------- */
+  .kitchen{ padding: 8px 0 64px; }
+  .kitchen-card{
+    background: var(--cream-soft);
+    border: 1.5px dashed var(--brown);
+    border-radius: 6px;
+    padding: 40px clamp(20px, 6vw, 56px);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .kitchen-card h2{ text-align: center; }
+  .kitchen-card .lede{ text-align: center; color: var(--ink-soft); margin-bottom: 28px; }
+  .ingredient-list{ list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .ingredient-list li{
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--cream-edge);
+    padding-bottom: 12px;
+  }
+  .ingredient-list li:last-child{ border-bottom: none; padding-bottom: 0; }
+  .ingredient-list .mark{ color: var(--amber); font-family: var(--serif); font-size: 1.2rem; line-height: 1; }
+  .allergen-note{
+    margin-top: 22px;
+    padding: 14px 18px;
+    background: rgba(148,90,27,0.08);
+    border: 1px solid var(--cream-edge);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .allergen-note strong{ color: var(--brown-deep); }
+  .kitchen-note{ margin-top: 18px; font-size: 0.85rem; color: var(--ink-soft); text-align: center; }
+
+  /* ---------- story ---------- */
+  .story{ padding: 8px 0 64px; }
+  .story-text{ max-width: 640px; margin: 0 auto; }
+  .story-text p{ color: var(--ink-soft); }
+
+  /* ---------- how to order ---------- */
+  .order{ padding: 8px 0 64px; }
+  .order h2{ text-align: center; }
+  .order > .wrap > p.lede{ text-align: center; color: var(--ink-soft); max-width: 50ch; margin: 0 auto 40px; }
+  .steps{ display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .step{ display: flex; gap: 16px; }
+  .step-num{ font-family: var(--serif); font-size: 1.6rem; color: var(--amber); line-height: 1; min-width: 1.4em; }
+  .step h3{ font-size: 1.05rem; margin-bottom: 4px; }
+  .step p{ color: var(--ink-soft); margin: 0; font-size: 0.98rem; }
+  .order-note{
+    margin-top: 32px;
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{ padding: 8px 0 64px; }
+  .faq h2{ text-align: center; }
+  .faq > .wrap > .lede{ text-align: center; color: var(--ink-soft); margin-bottom: 32px; }
+  .faq-list{ max-width: 680px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq-item{
+    background: var(--cream-soft);
+    border: 1px solid var(--cream-edge);
+    border-radius: 12px;
+    padding: 4px 20px;
+  }
+  .faq-item summary{
+    cursor: pointer;
+    padding: 16px 0;
+    font-weight: 600;
+    color: var(--brown-deep);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 44px;
+  }
+  .faq-item summary::-webkit-details-marker{ display: none; }
+  .faq-item summary::after{
+    content: "+";
+    font-size: 1.3rem;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after{ content: "–"; }
+  .faq-item p{ color: var(--ink-soft); margin: 0 0 16px; }
+
+  /* ---------- contact ---------- */
+  .contact{ padding: 56px 0 64px; background: var(--brown-deep); color: var(--cream); border-radius: 18px; margin: 0 24px; }
+  .contact .wrap{ text-align: center; }
+  .contact h2{ color: var(--cream); }
+  .contact .lede{ color: #E7D6BE; max-width: 48ch; margin: 0 auto 32px; }
+  .contact-links{ display: grid; gap: 14px; max-width: 380px; margin: 0 auto; }
+  .contact-link{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 44px;
+    padding: 14px 20px;
+    background: rgba(247,239,224,0.08);
+    border: 1.5px solid rgba(247,239,224,0.35);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--cream);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .contact-link:hover{ background: rgba(247,239,224,0.16); border-color: var(--cream); }
+  .contact-link svg{ width: 22px; height: 22px; flex-shrink: 0; color: var(--amber-bright); }
+  .contact-link .label{ text-align: left; }
+  .contact-link .label strong{ display: block; font-size: 0.98rem; }
+  .contact-link .label span{ display: block; font-size: 0.82rem; color: #C9B79A; }
+
+  /* ---------- footer ---------- */
+  footer{ padding: 32px 24px 40px; text-align: center; font-size: 0.82rem; color: var(--ink-soft); }
+  footer p{ margin: 4px 0; }
+
+  /* ---------- responsive ---------- */
+  @media (min-width: 780px){
+    .hero-grid{ grid-template-columns: 1.1fr 0.9fr; }
+    .hero-copy p{ max-width: 42ch; }
+    .steps{ grid-template-columns: repeat(3, 1fr); }
+    .step{ flex-direction: column; gap: 8px; }
+    .step-num{ font-size: 1.9rem; }
+    .benefit-grid{ grid-template-columns: repeat(4, 1fr); }
+  }
+
+  :focus-visible{ outline: 2.5px solid var(--brown); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top">
+        <span class="wm-full">Tshidi's Crunchy Muesli</span>
+        <span class="wm-short">Tshidi's Muesli</span>
+      </a>
+      <nav class="site-nav" aria-label="Section navigation">
+        <a href="#muesli">Muesli</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#story">Our Story</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order">Order</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+        <span class="btn-label-full">Order on WhatsApp</span><span class="btn-label-short">Order</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="price-badge">500g bag — R60</p>
+          <h1>Handmade crunchy muesli, toasted fresh in small batches.</h1>
+          <p>Toasted oats, nuts, seeds and dried fruit, mixed and packed by hand — a simple, honest recipe with no shortcuts.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order on WhatsApp
+            </a>
+            <a class="btn btn-outline" href="https://www.instagram.com/tshidi_muesli.sa/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r="0.6" fill="currentColor" stroke="none"/></svg>
+              Message on Instagram
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <picture>
+            <source srcset="assets/images/logo.webp" type="image/webp">
+            <img src="assets/images/logo.jpg" width="700" height="700" alt="Tshidi's Crunchy Muesli logo badge, showing a bowl of muesli with berries and nuts">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <svg class="sprig" width="120" height="28" viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 14 H118" stroke="#C9A876" stroke-width="1"/>
+      <g fill="#C9A876">
+        <ellipse cx="34" cy="14" rx="7" ry="3.4" transform="rotate(-30 34 14)"/>
+        <ellipse cx="60" cy="14" rx="8" ry="4" transform="rotate(0 60 14)"/>
+        <ellipse cx="86" cy="14" rx="7" ry="3.4" transform="rotate(30 86 14)"/>
+      </g>
+    </svg>
+
+    <!-- 2. PRODUCT / PRICING -->
+    <section id="muesli" class="product">
+      <div class="wrap">
+        <div class="product-card">
+          <h2>Tshidi's Original Crunchy Muesli</h2>
+          <div class="product-meta">
+            <span class="product-size">500g</span>
+            <span class="product-price">R60</span>
+          </div>
+          <p>Toasted oats, nuts, seeds and dried fruit — mixed and packed by hand in small batches. Currently the only flavour we make, so every bag gets our full attention.</p>
+          <a class="btn btn-primary" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY TSHIDI'S -->
+    <section class="benefits">
+      <div class="wrap">
+        <h2>Why you'll love it</h2>
+        <p class="lede">Crunchy, wholesome and freshly made — the way muesli should be.</p>
+        <div class="benefit-grid">
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21V9"/><circle cx="12" cy="6" r="1.3" fill="currentColor" stroke="none"/><ellipse cx="9" cy="9.5" rx="2.3" ry="1.3" transform="rotate(-35 9 9.5)"/><ellipse cx="15" cy="9.5" rx="2.3" ry="1.3" transform="rotate(35 15 9.5)"/><ellipse cx="9" cy="13.5" rx="2.3" ry="1.3" transform="rotate(-35 9 13.5)"/><ellipse cx="15" cy="13.5" rx="2.3" ry="1.3" transform="rotate(35 15 13.5)"/></svg>
+            <h3>Wholesome ingredients</h3>
+            <p>Real oats, nuts, seeds and fruit — nothing artificial.</p>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6" stroke-linecap="round"/></svg>
+            <h3>Naturally crunchy</h3>
+            <p>Toasted for a satisfying crunch in every bowl.</p>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <h3>No preservatives</h3>
+            <p>Made fresh in small batches, not sitting on a shelf.</p>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 7h9M8 12h9M8 17h9" stroke-linecap="round"/><circle cx="4.5" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="4.5" cy="17" r="1" fill="currentColor" stroke="none"/></svg>
+            <h3>Simple ingredients</h3>
+            <p>A short, honest ingredient list you can actually read.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUCT IMAGERY -->
+    <!-- Layout is set up to take a second image (packaging or prep photo) later —
+         just duplicate .imagery-frame inside a two-column wrapper once one is available. -->
+    <section class="imagery">
+      <div class="wrap">
+        <figure class="imagery-frame">
+          <picture>
+            <source srcset="assets/images/bowl.webp" type="image/webp">
+            <img src="assets/images/bowl.jpg" width="532" height="365" loading="lazy" alt="A bowl of Tshidi's Crunchy Muesli topped with almonds, blueberries and raspberries">
+          </picture>
+          <figcaption>Best served with milk, yoghurt or fresh fruit.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. INGREDIENTS -->
+    <section id="ingredients" class="kitchen">
+      <div class="wrap">
+        <div class="kitchen-card">
+          <h2>What's in the bag</h2>
+          <p class="lede">A simple, honest mix — nothing that needs a label you can't pronounce.</p>
+          <ul class="ingredient-list">
+            <li><span class="mark">•</span> Toasted rolled oats</li>
+            <li><span class="mark">•</span> Almonds and mixed nuts</li>
+            <li><span class="mark">•</span> Pumpkin and sunflower seeds</li>
+            <li><span class="mark">•</span> Dried berries and fruit</li>
+            <li><span class="mark">•</span> A touch of honey</li>
+          </ul>
+          <p class="allergen-note"><strong>Contains nuts.</strong> Message us on WhatsApp or Instagram before ordering if you have any allergies, want to check current flavours, or ask about ingredient variations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. OUR STORY -->
+    <section id="story" class="story">
+      <div class="wrap">
+        <div class="story-text center">
+          <h2>From one kitchen to yours</h2>
+          <p class="measure" style="margin-left:auto;margin-right:auto;">Tshidi's Crunchy Muesli started in a home kitchen, with a bit of trial and error and a lot of taste-testing. Every batch is toasted, mixed and packed by hand, then sent out as soon as it's ready.</p>
+          <p class="measure" style="margin-left:auto;margin-right:auto;">It's a small operation for now, which means every bag gets real attention before it reaches you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      TESTIMONIALS (placeholder only — do not populate with fabricated reviews)
+      Once real customer testimonials exist, this can go here, between "Our story" and "How to order".
+      Suggested structure:
+
+      <section id="testimonials" class="testimonials">
+        <div class="wrap">
+          <h2>What people are saying</h2>
+          <div class="testimonial-grid">
+            <blockquote class="testimonial">
+              <p>"[real customer quote]"</p>
+              <cite>— [Customer name or Instagram handle]</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      Style .testimonial like .kitchen-card (cream-soft background, rounded, quiet border)
+      to match the rest of the page.
+    -->
+
+    <!-- 7. HOW TO ORDER -->
+    <section id="order" class="order">
+      <div class="wrap">
+        <h2>How to order</h2>
+        <p class="lede">There's no online checkout — just a quick message and we'll take it from there.</p>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Message us</h3>
+              <p>Send a WhatsApp message or Instagram DM with what you'd like to order.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Confirm your order</h3>
+              <p>We'll reply to confirm your order and current availability (500g bags are R60).</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Arrange collection or delivery</h3>
+              <p>Once it's confirmed, we'll sort out collection or delivery directly with you.</p>
+            </div>
+          </div>
+        </div>
+        <p class="order-note">Collection and delivery availability is confirmed directly when you order, over WhatsApp or Instagram.</p>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq" class="faq">
+      <div class="wrap">
+        <h2 class="center">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How much is a bag?</summary>
+            <p>R60 for a 500g bag.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I order?</summary>
+            <p>Via WhatsApp or Instagram DM — there's no online checkout.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it contain nuts?</summary>
+            <p>Yes. The mix includes almonds and mixed nuts, along with pumpkin and sunflower seeds.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I collect or get delivery?</summary>
+            <p>Both are possible — collection and delivery availability is confirmed directly with you once your order is placed.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I ask about allergens or current flavours?</summary>
+            <p>Message us directly on WhatsApp or Instagram — we're happy to answer before you order.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FINAL CTA / CONTACT -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Get in touch</h2>
+        <p class="lede">Orders and questions are handled directly — no online store, just a real conversation.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+            <span class="label"><strong>WhatsApp</strong><span>083 792 5118</span></span>
+          </a>
+          <a class="contact-link" href="https://www.instagram.com/tshidi_muesli.sa/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r="0.6" fill="currentColor" stroke="none"/></svg>
+            <span class="label"><strong>Instagram</strong><span>@tshidi_muesli.sa</span></span>
+          </a>
+          <a class="contact-link" href="mailto:tshidimeusli@gmail.com?subject=Muesli%20order">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
+            <span class="label"><strong>Email</strong><span>tshidimeusli@gmail.com</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Tshidi's Crunchy Muesli · Est. 2026</p>
+    <p>Proudly South African 🇿🇦 · Handmade in small batches.</p>
+    <p>Orders via WhatsApp, Instagram or email only.</p>
+    <p>&copy; 2026 Tshidi's Crunchy Muesli</p>
+  </footer>
+
+</body>
+</html>
