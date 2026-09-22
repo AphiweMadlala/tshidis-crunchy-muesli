@@ -203,40 +203,41 @@
 
   /* ---------- product / pricing ---------- */
   .product{ padding: 8px 0 48px; }
-  .product-card{
-    max-width: 620px;
-    margin: 0 auto;
-    text-align: center;
+  .product > .wrap > .lede{ color: var(--ink-soft); max-width: 52ch; margin: 0 auto 34px; }
+  .variant-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 960px;
+    margin: 0 auto 30px;
+  }
+  .variant-card{
     background: var(--cream-soft);
     border: 1.5px solid var(--cream-edge);
-    border-radius: 18px;
-    padding: clamp(28px, 5vw, 44px);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
   }
-  .product-card p{ color: var(--ink-soft); max-width: 46ch; margin-left: auto; margin-right: auto; }
-  .variant-list{
-    list-style: none;
-    margin: 26px 0 30px;
-    padding: 0;
-    text-align: left;
-  }
-  .variant-list li{
+  .variant-card-head{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 12px;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--cream-edge);
-    font-size: 1.02rem;
+    margin-bottom: 6px;
   }
-  .variant-list li:last-child{ border-bottom: none; }
-  .variant-name{ color: var(--ink); }
+  .variant-card-head h3{ font-size: 1.08rem; margin: 0; }
   .variant-price{
     font-family: var(--serif);
     color: var(--amber);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     white-space: nowrap;
+    flex-shrink: 0;
   }
+  .variant-card p{ color: var(--ink-soft); font-size: 0.92rem; margin: 0 0 16px; flex-grow: 1; }
+  .variant-order{ align-self: flex-start; }
+  .variant-footnote{ color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 20px; }
 
   /* ---------- benefits ---------- */
   .benefits{ padding: 8px 0 56px; }
@@ -393,6 +394,7 @@
     .step{ flex-direction: column; gap: 8px; }
     .step-num{ font-size: 1.9rem; }
     .benefit-grid{ grid-template-columns: repeat(4, 1fr); }
+    .variant-grid{ grid-template-columns: repeat(2, 1fr); }
   }
 
   :focus-visible{ outline: 2.5px solid var(--brown); outline-offset: 2px; }
@@ -458,21 +460,82 @@
       </g>
     </svg>
 
-    <!-- 2. PRODUCT / PRICING -->
+        <!-- 2. PRODUCT / PRICING -->
     <section id="muesli" class="product">
       <div class="wrap">
-        <div class="product-card">
-          <h2>Our Muesli Variants</h2>
-          <p class="lede">Toasted oats, nuts, seeds and dried fruit — mixed and packaged in small batches. All variants come in 500g packs.</p>
-          <ul class="variant-list">
-            <li><span class="variant-name">Plain Muesli</span><span class="variant-price">R50</span></li>
-            <li><span class="variant-name">Tree Nut Muesli</span><span class="variant-price">R55</span></li>
-            <li><span class="variant-name">Raisin Muesli</span><span class="variant-price">R50</span></li>
-            <li><span class="variant-name">Tree Nuts &amp; Omega Seeds</span><span class="variant-price">R60</span></li>
-            <li><span class="variant-name">Tree Nuts &amp; Chia Seeds</span><span class="variant-price">R60</span></li>
-            <li><span class="variant-name">Tree Nuts &amp; Dried Fruit</span><span class="variant-price">R70</span></li>
-          </ul>
-          <a class="btn btn-primary" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
+        <h2 class="center">Our Muesli Variants</h2>
+        <p class="lede center">Toasted oats, nuts, seeds and dried fruit — mixed and packaged in small batches. All variants come in 500g packs.</p>
+        <div class="variant-grid">
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Plain Muesli</h3>
+              <span class="variant-price">R50</span>
+            </div>
+            <p>Just the essentials — toasted oats with a simple nut and seed mix. No extras, no fuss.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Plain%20Muesli%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Tree Nut Muesli</h3>
+              <span class="variant-price">R55</span>
+            </div>
+            <p>Toasted oats loaded with tree nuts (almonds, cashews, macadamia) and walnuts.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Tree%20Nut%20Muesli%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Raisin Muesli</h3>
+              <span class="variant-price">R50</span>
+            </div>
+            <p>Toasted oats with a simple nut and seed mix, plus raisins for natural sweetness.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Raisin%20Muesli%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Tree Nuts & Omega Seeds</h3>
+              <span class="variant-price">R60</span>
+            </div>
+            <p>Toasted oats with tree nuts and a boost of omega seeds.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Tree%20Nuts%20%26%20Omega%20Seeds%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Tree Nuts & Chia Seeds</h3>
+              <span class="variant-price">R60</span>
+            </div>
+            <p>Toasted oats with tree nuts and chia seeds mixed through.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Tree%20Nuts%20%26%20Chia%20Seeds%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          <div class="variant-card">
+            <div class="variant-card-head">
+              <h3>Tree Nuts & Dried Fruit</h3>
+              <span class="variant-price">R70</span>
+            </div>
+            <p>Toasted oats with tree nuts and a generous mix of dried fruit.</p>
+            <a class="btn btn-outline btn-sm variant-order" href="https://wa.me/27837925118?text=Hi%20Tshidi%27s%20Muesli%21%20I%27d%20like%20to%20place%20an%20order.%0A%0AVariant%3A%20Tree%20Nuts%20%26%20Dried%20Fruit%0AQuantity%3A%0ACollection%20or%20delivery%3A%0AArea%3A" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
+              Order this one
+            </a>
+          </div>
+          </div>
+        <p class="variant-footnote center">Not sure which one to pick? Message us — we're happy to help.</p>
+        <div class="center">
+          <a class="btn btn-primary" href="https://wa.me/27837925118?text=Hi%20Tshidi's%20Muesli!%20I'd%20like%20to%20place%20an%20order.%0A%0AVariant:%0AQuantity:%0ACollection%20or%20delivery:%0AArea:" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.5C6.98 2.5 2.9 6.4 2.9 11.2c0 1.9.66 3.7 1.9 5.2L3.6 21l4.8-1.3c1.1.55 2.32.85 3.6.85 5.02 0 9.1-3.9 9.1-8.7S17.02 2.5 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 9c0-.6.5-1.1 1.1-1.1h.8c.4 0 .7.25.85.6l.5 1.25c.15.35.05.75-.2 1l-.5.5c.55 1.05 1.4 1.9 2.45 2.45l.5-.5c.25-.25.65-.35 1-.2l1.25.5c.35.15.6.45.6.85v.8c0 .6-.5 1.1-1.1 1.1-4.3 0-7.75-3.45-7.75-7.75z" fill="currentColor" stroke="none"/></svg>
             Order on WhatsApp
           </a>
@@ -539,7 +602,7 @@
             <li><span class="mark">•</span> Butter</li>
             <li><span class="mark">•</span> A touch of maple syrup</li>
           </ul>
-          <p class="allergen-note"><strong>Contains nuts.</strong> Message us on WhatsApp or Instagram before ordering if you have any allergies, want to check current flavours, or ask about ingredient variations.</p>
+          <p class="allergen-note"><strong>Nut content varies by variant</strong> — see the variants above. Message us on WhatsApp or Instagram before ordering if you have any allergies, want to check current flavours, or ask about ingredient variations.</p>
         </div>
       </div>
     </section>
@@ -623,7 +686,7 @@
           </details>
           <details class="faq-item">
             <summary>Does it contain nuts?</summary>
-            <p>Yes. The mix includes almonds and mixed nuts, along with pumpkin and sunflower seeds.</p>
+            <p>It depends on the variant — several include tree nuts (almonds, cashews, macadamia) and walnuts. Check the variants list above, or ask us directly.</p>
           </details>
           <details class="faq-item">
             <summary>Can I collect or get delivery?</summary>
